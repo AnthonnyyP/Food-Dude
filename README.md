@@ -71,8 +71,8 @@ Recipe Details
 
 #### **_Credits_**:
 
-[Tasty]('https://tasty.co/')
+[Tasty](https://tasty.co/)
 
-[Github]('https://github.com/public-apis/public-apis#food--drink')
+[Github](https://github.com/public-apis/public-apis#food--drink)
 
-[RapidAPI]('https://rapidapi.com/apidojo/api/tasty')
+[RapidAPI](https://rapidapi.com/apidojo/api/tasty)
