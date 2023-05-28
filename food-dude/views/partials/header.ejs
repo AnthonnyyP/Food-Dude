@@ -10,12 +10,16 @@
 <body>
   <h1>The Food Dude</h1>
     <nav>
-        <a href = "/">Home</a>
+        <a href = "/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a>
         <a href = "../../routes/posts.js">Recipes</a>
-        <a href = "">Create</a>
-      <div class = "nav-right">
-        <a href = "">Login</a>
-      </div>
-    </nav>
+        <% if (user) { %>
+        <a href=""	<%- title === 'Add a Recipe' ? 'class="active"' : '' %>>Add a Recipe</a>
+        <a href="/logout">Logout</a>
+        <% } else { %>
+          <div>
+          <a href="/auth/google" class="login">Login&nbsp;<img src=""></a>
+        <% } %>
+          </div>
+      </nav>
     
-  
+    
