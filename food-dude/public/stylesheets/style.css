@@ -3,6 +3,18 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+nav { 
+  background-color: black;
 }
+
+.nav-right {
+  float: right; 
+}
+
+a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
