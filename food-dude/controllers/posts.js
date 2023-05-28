@@ -1,7 +1,7 @@
 const Post = require ('../models/post')
 
 const index = async (req,res) => {
-  res.render('/posts'), 
+  res.render('/posts') 
 }
 
 module.exports = {
