@@ -5,16 +5,41 @@ body {
 
 nav { 
   background-color: black;
+  padding: 10px;
 }
 
-.nav-right {
+#nav-right {
   float: right; 
+  color: white; 
 }
 
 a {
   color: white;
-  padding: 10px;
   text-decoration: none;
+  padding: 20px;
 }
 
 
+div {
+  width: fit-content;
+}
+
+#food-card {
+  display: flex; 
+  flex-direction: row;
+
+}
+
+#posts-details {
+  color: black; 
+}
+
+#post-img-left {
+  
+  padding: 30px;
+  margin-right: 10px;
+}
+
+#post-text-right {
+  margin: 0;
+}

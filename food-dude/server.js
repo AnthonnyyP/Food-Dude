@@ -6,14 +6,21 @@ const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport'); 
 
+// ----------- CONFIG 
+
 require('dotenv').config();
 require('./config/database');
 require('./config/passport'); 
 
-const indexRouter = require('./routes/index');
-// const feedsRouter = require('./routes/feeds');
-// const createsRouter = require('./routes/creates');
+//--------------------
 
+// ----------- ROUTERS 
+
+const indexRouter = require('./routes/index');
+const postsRouter = require('./routes/posts');
+const newRecipesRouter = require('./routes/newrecipes');
+
+//-------------------
 const app = express();
 
 // view engine setup
@@ -25,6 +32,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+// --------- OAUTH
 
 app.use(session({
   secret: process.env.SECRET,
@@ -39,9 +49,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+//-----------------------
+
+
 app.use('/', indexRouter);
-// app.use('',)
-// app.use('',)
+app.use('/posts', postsRouter);
+app.use('/add', newRecipesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
