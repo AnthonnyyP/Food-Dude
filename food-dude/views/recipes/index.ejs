@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 
-<% posts.forEach(function(p) { %>
+<% recipes.forEach(function(p) { %>
   <div id = "food-card">
   <div id = "post-img-left">
   <img  src = "<%= p.image %>"
@@ -10,9 +10,9 @@ width = "300"
   </div>
 
   <div id = "post-text-right">
-  <h1> <a id = "posts-details" href = " <%= p._id %> "> <%= p.title %> </a> </h1>
+  <h1> <a id = "posts-details" href = "/recipes/<%= p._id %> "> <%= p.title %> </a> </h1>
     <p> <%= p.description %> </p>
-    <a href="/posts/<%= p._id %>">More Details</a>
+    <a href="/recipes/<%= p._id %>">More Details</a>
   </div>
 </div>
 <% }) %>

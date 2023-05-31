@@ -3,9 +3,29 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+label {
+  margin: 15px;
+}
+
 nav { 
   background-color: black;
   padding: 10px;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border-radius: 10px;;
+  width: 50%;
+  margin: 10px;
+}
+
+textarea {
+  padding: 6px;
+  border-radius: 10px;;
+  width: 80%;
+  margin:10px;
 }
 
 #nav-right {
@@ -42,4 +62,9 @@ div {
 
 #post-text-right {
   margin: 0;
+}
+
+#cyor-page {
+  border: 1px solid black; 
+  border-radius: 12px;
 }

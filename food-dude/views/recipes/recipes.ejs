@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+
+<h2>Create Your Own Recipe!</h2>
+
+<section id = "cyor-page">
+  <form id = "cyor-form" method = "POST" action = "/recipes">
+    <label>Recipe Name:</label>
+      <input name = "title" type = "text">
+      <br>
+
+      <label>Image:</label>
+      <input type = "string" name = "image">
+
+    <label>Date Posted:</label>
+      <input name = "datePosted" type = "datetime-local">
+      <br>
+
+    <label>Time Required:</label>
+      <input type = "number" min = "1">
+      <br>
+
+    <label>Ingredients:</label>
+    <br>
+      <textarea name = "ingredients" type = "text"></textarea>
+      <br>
+
+    <label>Description:</label>
+    <br>
+    <textarea name = "description" type = "text"></textarea>
+
+    <label>Steps:</label>
+    <br>
+      <textarea name = "instructions" type = "text"></textarea>
+      <br>
+      <input type = "submit" value = "Create Recipe">
+      <br>
+
+  </form>
+</section>
+
+
+<%- include('../partials/footer') %>

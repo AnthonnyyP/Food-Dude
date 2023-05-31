@@ -7,9 +7,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'The Food Dude' })
 })
 
-router.get(
-  '/auth/google',
-  passport.authenticate(
+router.get('/auth/google', passport.authenticate(
     // Two arguments:
     //First one is Strategy
     'google',
@@ -22,16 +20,14 @@ router.get(
   )
 )
 
-router.get(
-  '/oauth2callback',
-  passport.authenticate(
+router.get('/oauth2callback',passport.authenticate(
     // Strategy
     'google',
     {
       //User has consented and logged in, send them where?
-      successRedirect: '/posts',
+      successRedirect: '/recipes',
       //Change to path that makes sense for your app.
-      failureRedirect: '/posts'
+      failureRedirect: '/recipes'
     }
   )
 )

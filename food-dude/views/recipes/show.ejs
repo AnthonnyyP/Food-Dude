@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+  <div id = "details-card">
+  <div id = "details-img">
+    <img  src = "<%= recipe.image %>"
+    width = "300"
+    >
+  </div>
+
+  <div id = "details-content">
+    <h1> <%= recipe.title %> </h1>
+      <h2>Author: <%= recipe.author %> </h2>
+      <h2>Rating: <%= recipe.rating %> </h2>
+      <p>Date Posted: <%= recipe.datePosted %> </p>
+      <p> <%= recipe.user %> </p>
+
+      <h2>Ingredients</h2>
+      <p> <%= recipe.ingredients %> </p>
+
+      <h2>Instructions</h2>
+      <p> <%= recipe.instructions %> </p>
+
+      <h2>Comments</h2>
+      <p> <%= recipe.comments %> </p>
+  </div>
+  </div>
+
+<%- include('../partials/footer') %>
