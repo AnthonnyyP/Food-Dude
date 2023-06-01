@@ -10,9 +10,9 @@ width = "300"
   </div>
 
   <div id = "post-text-right">
-  <h1> <a id = "posts-details" href = "/recipes/<%= p._id %> "> <%= p.title %> </a> </h1>
-    <p> <%= p.description %> </p>
-    <a href="/recipes/<%= p._id %>">More Details</a>
+  <h2> <a id = "posts-details" href = "/recipes/<%= p._id %> "><%= p.title %> </a> </h2>
+    <p id = "feed-description"> <%= p.description %> </p>
+    <button><a class = "details-tag" href="/recipes/<%= p._id %>">More Details</a></button>
   </div>
 </div>
 <% }) %>

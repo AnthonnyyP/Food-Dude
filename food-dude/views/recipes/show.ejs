@@ -6,9 +6,8 @@
     width = "300"
     >
   </div>
-
   <div id = "details-content">
-    <h1> <%= recipe.title %> </h1>
+    <h2><%= recipe.title %></h2>
       <h2>Author:</h2> 
       <p><%= recipe.author %></p>
       <h2>Rating:</h2> 
@@ -23,9 +22,23 @@
       <p> <%= recipe.instructions %> </p>
     </div>
 
+    <br><br><h2>Comments</h2>
+    <form id="add-review-form" method="POST"
+      action="/recipes/<%= recipe._id %>/comments">
+      <label>Comment:</label>
+      <textarea name="comment"></textarea>
+      <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+      <input type="submit" value="Add Comment">
+    </form>
 
-  
-  <% if (recipe.comments.length) { %>
+    <% if (recipe.comments.length) { %>
     <table>
       <thead>
         <tr>
@@ -41,6 +54,13 @@
             <td><%= r.createdAt.toLocaleDateString() %></td>
             <td><%= r.comment %></td>
             <td><%= r.rating %></td>
+            <td>
+              <% if (user?._id.equals(r.user)) { %>
+                <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              <% } %>
+            </td>
           </tr>
         <% }); %>
       </tbody>
@@ -50,5 +70,4 @@
   <% } %>
   </div>
   </div>
-
 <%- include('../partials/footer') %>

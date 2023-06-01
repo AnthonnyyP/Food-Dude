@@ -35,7 +35,7 @@ router.get('/oauth2callback',passport.authenticate(
 router.get('/logout', (req, res) => {
   req.logout(() => {
     //Change to path that makes sense for your app.
-    res.redirect('index')
+    res.redirect('/')
   })
 })
 

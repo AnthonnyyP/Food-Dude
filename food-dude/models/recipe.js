@@ -3,8 +3,6 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema(
   {
-    userName: String,
-    userAvatar: String,
     comment: {
       type: String, 
       required: true, 
@@ -18,8 +16,13 @@ const commentSchema = new Schema(
       max: 5, 
       default: 5, 
     },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true, 
+    },
     userName: String,
-    userAvatar: String
+    userAvatar: String,
   },
   {
     timestamps: true

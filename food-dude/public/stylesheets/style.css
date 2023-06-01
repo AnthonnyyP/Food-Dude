@@ -3,6 +3,12 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 60px;
+  margin: 0px;
+}
+
 label {
   margin: 15px;
 }
@@ -12,21 +18,6 @@ nav {
   padding: 10px;
 }
 
-input {
-  display: flex;
-  flex-direction: column;
-  padding: 6px;
-  border-radius: 10px;;
-  width: 50%;
-  margin: 10px;
-}
-
-textarea {
-  padding: 6px;
-  border-radius: 10px;;
-  width: 80%;
-  margin:10px;
-}
 
 #nav-right {
   float: right; 
@@ -36,10 +27,14 @@ textarea {
 a {
   color: white;
   text-decoration: none;
-  padding: 10px;
   text-align: left; 
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
 }
 
+nav a {
+  padding: 20px;
+}
 
 div {
   width: fit-content;
@@ -48,7 +43,6 @@ div {
 #food-card {
   display: flex; 
   flex-direction: row;
-
 }
 
 #posts-details {
@@ -62,10 +56,24 @@ div {
 }
 
 #post-text-right {
-  margin: 0;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 #cyor-page {
+  border: 1px solid black; 
+  border-radius: 12px;
+  width: fit-content;
+  padding: 50px;
+
+}
+
+#cyor-form {
+
+}
+
+#cyor-page2 {
   border: 1px solid black; 
   border-radius: 12px;
 }
@@ -75,15 +83,31 @@ div {
   flex-direction: row;
 }
 
-#landing-column {
+.container {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
 }
+
+.image-container {
+  width: 300px; 
+  height: 300px; 
+  background-image: url('https://i.imgur.com/BJqx4s4.png');
+  background-size: cover;
+  background-position: center;
+  margin: 50px;
+}
+
+.row-e2 {
+  margin: 100px;
+  flex-basis: 500px;;
+  flex-shrink: 100;
+}
+
 
 #home-img {
+  margin: 20px;
   max-width:fit-content
 }
-
 
 #home-p {
   display: flex;
@@ -101,4 +125,8 @@ div {
   width: 8rem;
   grid-column: 2 / 3;
   margin-bottom: 2rem;
+}
+
+.details-tag {
+  color: black; 
 }
