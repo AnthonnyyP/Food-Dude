@@ -7,9 +7,16 @@ const commentSchema = new Schema(
     userAvatar: String,
     comment: {
       type: String, 
+      required: true, 
     },
     datePosted: {
       type: Date
+    },
+    rating: {
+      type: Number, 
+      min: 1,
+      max: 5, 
+      default: 5, 
     },
     userName: String,
     userAvatar: String
@@ -30,11 +37,10 @@ const recipeSchema = new Schema(
     description: {
       type: String, 
     },
-    rating: {
+    timerequired: {
       type: Number,
       min: 1,
-      max: 5,
-      default: 5
+      max: 999,
     },
     datePosted: {
       type: Date
