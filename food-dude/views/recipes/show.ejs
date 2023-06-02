@@ -20,15 +20,13 @@
       <h3>Ingredients</h3>
         <p><%= recipe.ingredients %> </p>
 
-    </div>
- </div>
-    <div id = "show-inst-cmt">
       <h3>Instructions</h3>
         <p> <%= recipe.instructions %> </p>
-
+      </div>
+    </div>
     
     <br>
-    
+    <div id = "show-inst-cmt">
     <h2>Comments</h2>
 
       <form id="add-review-form" method="POST"
@@ -52,8 +50,8 @@
 
     <% if (recipe.comments.length) { %>
 
+  <div id = "comments-table">
     <table>
-
       <thead>
         <tr>
           <th>Date</th>
@@ -83,6 +81,7 @@
   <% } else { %>
     <h5>No Reviews Yet</h5>
   <% } %>
+    </div>
   </div>
  </div>
 <%- include('../partials/footer') %>

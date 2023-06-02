@@ -104,6 +104,11 @@ div {
   flex-direction: row;
 }
 
+.row-img {
+  margin: 20px;
+  
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -148,19 +153,14 @@ div {
   margin-bottom: 2rem;
 }
 
-.details-tag {
-  color: black; 
+#details-but {
+  margin-top: 90px;
+  font-family: 'Roboto', sans-serif;
 }
 
-#show-container {  
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.4fr 1.6fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "Picture Title Title"
-    "Picture Body Body"
-    "Inst-Cmt Inst-Cmt Inst-Cmt"; 
+.details-tag {
+  margin-top: 30px;
+  color: black; 
 }
 
 #show-img { 
@@ -170,6 +170,9 @@ div {
 
 #show-title {
   grid-area: Title;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  text-underline-position: below;
 }
 
 #show-info { 
@@ -177,15 +180,32 @@ div {
   flex-direction: column;
   grid-area: Body;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 20px;;
 }
 
 #show-inst-cmt { 
   grid-area:Inst-Cmt; 
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  font-size: 15px;
+  display: flex; 
+  flex-direction: column;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0px;
+  width: 96.5%;
+  border: 3px solid rgb(62, 57, 57);
+  border-radius: 5px;
 }
 
 #top-half {
-  display: flex;
-  flex-direction: row;
+  display: flex; 
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0px;
+  width: 100%;
+  border: 3px solid rgb(62, 57, 57);
+  border-radius: 5px;
+
 }
 
 #input-align {
@@ -203,4 +223,15 @@ div {
   font-size: 30px;
   text-decoration: underline;
   text-underline-position: below;
+}
+
+
+td {
+  padding: 30px;
+  
+}
+
+#landing-p {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }

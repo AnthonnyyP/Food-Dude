@@ -5,7 +5,6 @@ const commentsCtrl = require('../controllers/comments')
 
 router.post('/recipes/:id/comments', ensureLoggedIn, commentsCtrl.create);
 
-router.delete('/comments/:id', commentsCtrl.delete);
+router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete);
 
-router.delete('/recipes', commentsCtrl.delete)
 module.exports = router; 
