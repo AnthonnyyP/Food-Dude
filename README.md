@@ -6,7 +6,7 @@
 
 [Github](https://github.com/ant087)
 | [LinkedIn](https://www.linkedin.com/in/ap777/)
-| [Trello](https://trello.com/invite/b/lR7rzGOu/ATTIdbb453462e87817db470a86b33ad5264931F0CE6/full-stack-food-blog)
+| [Trello](https://trello.com/b/lR7rzGOu/full-stack-food-blog)
 
 ---
 
@@ -21,15 +21,17 @@
 
 This will be a blog dedicated to all things food but most notably recipes!
 
-This project will be utilizing the concepts of MVC framework to produce a full-stacked application, in this case, a blog, which allows the user to search and view recipes. They will be able to create a post for their favorite recipes but also comment on others' recipes as well. Users will also have the ability to add recipes that they would like to try to their "recipe book" or "cook book" to be referred to later on.
-
-API functionality will be added as well to supply recipes! 
+This project will be utilizing the concepts of MVC framework to produce a full-stacked application, in this case, a blog, which allows the user to browse through a database of recipes via a main feed. They will be able to create a post for their favorite recipes (DE #1) but also comment on others' recipes as well (D3 #2).
 
 ---
 
 #### **_Future Updates_**:
 
-TBD
+1. A public API will be added so that users will be able to use the search bar to look up keywords (i.e. "tacos") and all recipes within the database with that keyword will populate on the screen. 
+
+2. The landing page will be updated to contain a plethora of starter recipes that will include a broad range from different cuisines to different dishes for different holidays. 
+
+3. Categories and tags will be added to narrow down and increase specificity of the Users' searches. 
 
 ---
 
@@ -43,7 +45,6 @@ TBD
 6. Git
 7. Figma
 8. OAuth
-9. Public API
 10. MongoDB
 11. Mongoose
 
@@ -71,8 +72,15 @@ Recipe Details
 
 #### **_Credits_**:
 
-[Tasty](https://tasty.co/)
+[Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-position)
 
-[Github](https://github.com/public-apis/public-apis#food--drink)
+[Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
-[RapidAPI](https://rapidapi.com/apidojo/api/tasty)
+[Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+
+[LayoutIt](https://grid.layoutit.com/)
+
+[W3](https://www.w3schools.com/tags/att_input_size.asp)
+
+[W3](https://www.w3schools.com/css/css_border.asp)
+
