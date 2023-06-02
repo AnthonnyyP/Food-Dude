@@ -23,6 +23,8 @@ const show = async (req, res) => {
   res.render('recipes/show', { recipe })
 }
 
+const deletePost = 
+
 module.exports = {
   new: newRecipe,
   index,

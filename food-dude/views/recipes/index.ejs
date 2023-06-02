@@ -2,19 +2,27 @@
 
 
 <% recipes.forEach(function(p) { %>
+
   <div id = "food-card">
+
   <div id = "post-img-left">
-  <img  src = "<%= p.image %>"
-width = "300"
-  >
+    <img  src = "<%= p.image %>"
+    width = "300">
   </div>
 
   <div id = "post-text-right">
-  <h2> <a id = "posts-details" href = "/recipes/<%= p._id %> "><%= p.title %> </a> </h2>
+
+  <h2 id = "feed-title"> <%= p.title %> </h2>
+    <h3> <%= p.timerequired %> Minutes</h3>
+
     <p id = "feed-description"> <%= p.description %> </p>
+
     <button><a class = "details-tag" href="/recipes/<%= p._id %>">More Details</a></button>
+
   </div>
+  
 </div>
+
 <% }) %>
 
 <%- include('../partials/footer') %>

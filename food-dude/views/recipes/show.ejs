@@ -1,45 +1,59 @@
 <%- include('../partials/header') %>
 
-  <div id = "details-card">
-  <div id = "details-img">
-    <img  src = "<%= recipe.image %>"
-    width = "300"
-    >
-  </div>
-  <div id = "details-content">
-    <h2><%= recipe.title %></h2>
-      <h2>Author:</h2> 
-      <p><%= recipe.author %></p>
-      <h2>Rating:</h2> 
-      <p><%= recipe.rating %></p>
-      <h2>Date:</h2>
-      <p><%= recipe.datePosted %></p> 
-      <h2>Time Required:</h2> 
-      <p><%= recipe.timerequired %></p>
-      <h2>Ingredients</h2>
-      <p><%= recipe.ingredients %> </p>
-      <h2>Instructions</h2>
-      <p> <%= recipe.instructions %> </p>
+ <div class = "show-container">
+  <div id = "top-half">
+    <div id = "show-img">
+      <img  src = "<%= recipe.image %>"
+      width = "400">
     </div>
 
-    <br><br><h2>Comments</h2>
-    <form id="add-review-form" method="POST"
+    <div id = "show-info">
+
+      <h2><%= recipe.title %></h2>
+  
+      <h3>Author:</h3> 
+        <p><%= recipe.author %></p>
+      
+      <h3>Time Required:</h3> 
+        <p><%= recipe.timerequired %> Minutes</p>
+
+      <h3>Ingredients</h3>
+        <p><%= recipe.ingredients %> </p>
+
+    </div>
+ </div>
+    <div id = "show-inst-cmt">
+      <h3>Instructions</h3>
+        <p> <%= recipe.instructions %> </p>
+
+    
+    <br>
+    
+    <h2>Comments</h2>
+
+      <form id="add-review-form" method="POST"
       action="/recipes/<%= recipe._id %>/comments">
-      <label>Comment:</label>
-      <textarea name="comment"></textarea>
-      <label>Rating:</label>
-      <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected>5</option>
-      </select>
-      <input type="submit" value="Add Comment">
-    </form>
+
+        <label>Comment:</label>
+          <textarea name="comment"></textarea>
+
+        <label>Rating:</label>
+          <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+          </select>
+
+        <input type="submit" value="Add Comment">
+
+      </form>
 
     <% if (recipe.comments.length) { %>
+
     <table>
+
       <thead>
         <tr>
           <th>Date</th>
@@ -47,27 +61,28 @@
           <th>Rating</th>
         </tr>
       </thead>
+
       <tbody>
         <% recipe.comments.forEach(function(r) { %>
           <tr>
-            <!-- .toLocaleDateString() provides a more friendly date format -->
             <td><%= r.createdAt.toLocaleDateString() %></td>
             <td><%= r.comment %></td>
             <td><%= r.rating %></td>
             <td>
-              <% if (user?._id.equals(r.user)) { %>
-                <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
-                </form>
-              <% } %>
+            <% if (user?._id.equals(r.user)) { %>
+              <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+              </form>
+            <% } %>
             </td>
           </tr>
         <% }); %>
       </tbody>
+
     </table>
   <% } else { %>
     <h5>No Reviews Yet</h5>
   <% } %>
   </div>
-  </div>
+ </div>
 <%- include('../partials/footer') %>

@@ -1,45 +1,50 @@
 <%- include('../partials/header') %>
 
 
-<h2>Create Your Own Recipe!</h2>
+<h2 id = "cyor-title">Create Your Own Recipe!</h2>
 
 <section id = "cyor-page">
-  <form id = "cyor-form" method = "POST" action = "/recipes">
-    <label>Recipe Name:</label>
-      <input name = "title" type = "text">
-      <br>
 
-    <label>Image:</label>
-      <input type = "string" name = "image">
+  <form id = "cyor-form" method = "POST" action = "/recipes">
+    <div id = "input-align">
+    <label class = "cyor-row">What is the name of your recipe?</label>
+      <input name = "title" type = "text" size = "90">
+      <br>
+      <br>
+    <label class = "cyor-row">Insert the image URL you want to go along with your recipe.</label>
+      <input type = "string" name = "image" placeholder = "" size = "90">
+      <br>
+      <br>
+    <label class = "cyor-row">Insert the date in which you're making this post!</label>
+      <input name = "datePosted" type = "datetime-local" size = "90">
+      <br>
+      <br>
+    <label class = "cyor-row">How long does it take to make your recipe?</label>
+      <input name = "timerequired" type = "number" min = "1" size = "90">
+      <br>
+      <br>
+  </div>
+
+    <label>What ingredients do we need to make this?</label>
+      <br>
+      <br>
+      <textarea name = "ingredients" type = "text" placeholder = "Beef, onions, tomatoes...." rows = "10" cols = "100"></textarea>
+      <br>
+      <br>
+    <label>What's a brief description you'd give this recipe?</label>
+      <br>
+      <br>
+      <textarea name = "description" type = "text" placeholder = "A quick and easy 20 minute recipe for a delicious lunch..." rows = "10" cols = "100"></textarea>
+      <br>
+      <br>
+    <label>What are the step by step instructions to make this recipe?</label>
+      <br>
+      <br>
+      <textarea name = "instructions" type = "text" placeholder = "First, you want to ..." rows = "10" cols = "100"></textarea>
+      <br>
+      <input id = "create-input" type = "submit" value = "Create Recipe">
       <br>
       
-    <label>Date Posted:</label>
-      <input name = "datePosted" type = "datetime-local">
-      <br>
-
-    <label>Time Required:</label>
-      <input name = "timerequired" type = "number" min = "1">
-      <br>
-
-</section>
-
-<section id = "cyor-page2">
-    <label>Ingredients:</label>
-    <br>
-      <textarea name = "ingredients" type = "text"></textarea>
-      <br>
-
-    <label>Description:</label>
-    <br>
-    <textarea name = "description" type = "text"></textarea>
-    <br>
-    
-    <label>Steps:</label>
-    <br>
-      <textarea name = "instructions" type = "text"></textarea>
-      <br>
-      <input type = "submit" value = "Create Recipe">
-      <br>
   </form>
 </section>
 

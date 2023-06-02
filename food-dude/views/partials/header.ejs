@@ -17,16 +17,21 @@
         <a href = "/">Home</a>
 
         <a href = "/recipes">Recipes</a>
+
         <% if (user) { %>
+          
+      <div id = "nav-right">
         <a href="/recipes/new">Add a Recipe</a>
-        <div id = "nav-right">
-          <a href="/logout" class="login">Log-Out&nbsp;<img src=""></a>
-        </div>
+
+        <a href="/logout" class="login">Log-Out&nbsp;<img src=""></a>
+
     <% } else { %>
-        <div id = "nav-right">
+
           <a href="/auth/google" class="login">Log-In&nbsp;<img src=""></a>
-        </div>
+
         <% } %>
+
+      </div>
       </nav>
     
     

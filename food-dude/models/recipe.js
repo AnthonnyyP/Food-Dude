@@ -45,12 +45,8 @@ const recipeSchema = new Schema(
       min: 1,
       max: 999,
     },
-    datePosted: {
-      type: Date
-    },
-    user: {
-      userName: String,
-      userAvatar: String
+    author: {
+      type: String,
     },
     ingredients: {
       type: String

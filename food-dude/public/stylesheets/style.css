@@ -13,11 +13,24 @@ label {
   margin: 15px;
 }
 
+
 nav { 
   background-color: black;
-  padding: 10px;
+  padding: 5px;
 }
 
+input {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#create-input {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0px 0px 0px;
+
+}
 
 #nav-right {
   float: right; 
@@ -29,11 +42,11 @@ a {
   text-decoration: none;
   text-align: left; 
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 nav a {
-  padding: 20px;
+  padding: 10px;
 }
 
 div {
@@ -42,7 +55,11 @@ div {
 
 #food-card {
   display: flex; 
-  flex-direction: row;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0px;
+  width: 100%;
+  border: 3px solid rgb(62, 57, 57);
+  border-radius: 5px;
 }
 
 #posts-details {
@@ -50,9 +67,9 @@ div {
 }
 
 #post-img-left {
-  
   padding: 30px;
   margin-right: 10px;
+  
 }
 
 #post-text-right {
@@ -61,21 +78,25 @@ div {
   font-size: 18px;
 }
 
-#cyor-page {
-  border: 1px solid black; 
-  border-radius: 12px;
-  width: fit-content;
-  padding: 50px;
-
+#cyor-title {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 50px 0px
 }
 
 #cyor-form {
-
-}
-
-#cyor-page2 {
-  border: 1px solid black; 
-  border-radius: 12px;
+  position: relative;
+  margin: 1% auto;
+  min-height: 60%;
+  width: 65%;
+  padding: 20px 20px 20px 15px;
+  background: rgb(249, 249, 249);
+  border: 5px solid black; 
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 }
 
 #img-row {
@@ -129,4 +150,57 @@ div {
 
 .details-tag {
   color: black; 
+}
+
+#show-container {  
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 0.4fr 1.6fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Picture Title Title"
+    "Picture Body Body"
+    "Inst-Cmt Inst-Cmt Inst-Cmt"; 
+}
+
+#show-img { 
+  grid-area: Picture; 
+  padding: 80px;
+}
+
+#show-title {
+  grid-area: Title;
+}
+
+#show-info { 
+  display: flex;
+  flex-direction: column;
+  grid-area: Body;
+  justify-content: center;
+}
+
+#show-inst-cmt { 
+  grid-area:Inst-Cmt; 
+}
+
+#top-half {
+  display: flex;
+  flex-direction: row;
+}
+
+#input-align {
+  display: flex; 
+  flex-direction: column;
+}
+
+.cyor-row {
+  display: flex;
+  align-items: left;
+
+}
+
+#feed-title {
+  font-size: 30px;
+  text-decoration: underline;
+  text-underline-position: below;
 }
